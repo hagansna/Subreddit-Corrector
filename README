@@ -1,0 +1,3 @@
+A reddit bot that replies to any comment that has a subreddit in it's body referred to as "r/..." and adds a forwardslash to the subreddit name. This allows Reddit to automatically link to the subreddit.
+
+This code was adapted from /u/lizardsrock4's flipacoinbot [https://github.com/lizardsrock4].
