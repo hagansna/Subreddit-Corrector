@@ -25,8 +25,6 @@ def run_bot():
 					reply = reply + "\n/" + match
 				comment.reply(reply)
 				already_done.append(comment.id)
-def cls():
-	os.system('cls')
 
 
 while True:
