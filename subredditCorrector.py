@@ -1,8 +1,9 @@
 import praw, time, os
+import id
 
-r = praw.Reddit(user_agent = USER_AGENT) 
+r = praw.Reddit(id.USER_AGENT) 
 print("Logging in")
-r.login()
+r.login(id.USERNAME, id.PASS)
 already_done = []
 
 banned_subs = []
