@@ -6,7 +6,7 @@ print("Logging in")
 r.login(id.USERNAME, id.PASS)
 already_done = []
 
-banned_subs = []
+SUBREDDIT = [id.TEST]
 
 def run_bot():
 	print("Starting Stream")
@@ -17,9 +17,8 @@ def run_bot():
 		for word in comment_text.split():
 			if word.find("r/") == 0:
 				arr.append(word)
-		notBanned = comment.subreddit.display_name in banned_subs
 		if comment.id not in already_done and len(arr) > 0:
-			if comment.id is not notBanned:
+			if any(comment.subreddit.display_name.lower() == SUBREDDIT.lower() for sub in SUBREDDIT):
 				print("Match Found! Comment id:" + comment.id + " Subreddit: " + comment.subreddit.display_name)
 				reply = ""
 				for match in arr:
